@@ -1,0 +1,1 @@
+Dynamically generated restaurant page written in vanilla JavaScript, making use of npm and webpack. Part of The Odin Project's Full Stack Javascript curriculum.
