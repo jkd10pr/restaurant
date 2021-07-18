@@ -1,0 +1,171 @@
+body,html{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:rgba(255, 248, 146, 0.507)
+}
+
+#title-wrapper{
+    height: 20vw;
+    width: 100vw;
+    /* filter: blur(2px); */
+}
+
+#title-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    /* padding: 10vh; */
+}
+
+h1{
+
+    text-align: center;
+    color:white;
+    text-shadow: 0px 0px 5px black;
+    font-size : 10vh;
+    font-family: 'Great Vibes', cursive;
+    z-index: 100;
+    margin-bottom: 0px;
+    margin: 0px;}
+
+h2{
+
+    text-align: center;
+    color:white;
+    text-shadow: 0px 0px 5px black;
+    font-size : 4vh;
+    font-family: 'Great Vibes', cursive;
+    z-index: 100;
+    margin-top: 10px
+}
+
+#title-background{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    filter: blur(3px);
+    width: 100vw;
+    /* height: 100vw; */
+}
+#title-background img{
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+    width: 100vw;
+    filter: contrast(90%);
+}
+
+
+#info-card-wrapper{
+    margin: 5vh 0;
+    padding: 1vw;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: stretch;
+    justify-content: center
+}
+
+.info-card{
+    padding: 25px;
+    max-width: 25vw;
+    /* width: 18vw; */
+    min-width: 20vw;
+    font-family: 'Roboto', sans-serif;
+    border: 3px dotted rgb(197, 184, 0);
+    border-radius: 10px;
+    /* font-size: 1.3vw; */
+    text-align: justify;
+    margin: 20px;
+}
+
+.info-card-image{
+    width: 100%;
+    border-radius: 59%;
+}
+
+#footer{
+    color: white;
+    text-align: center;
+    padding: 25px;
+    /* height: 60px; */
+    background-color: rgb(80, 23, 0);
+}
+
+#nav-buttons{
+    position: absolute;
+    /* top: 20px; */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.button{
+    color: white;
+    position: relative;
+    font-size: 15px;
+    top: -85px;
+    margin: 20px;
+    padding: 5px;
+    background-color: transparent;
+    border: 2px dotted white;
+    border-radius: 15px;
+    transform: scale(1.5);
+    font-family: 'Great Vibes', cursive;
+    height: fit-content;
+
+}
+
+.button:hover{
+    background-color: rgba(255, 255, 255, 0.178);
+}
+
+.button:active{
+    background-color: rgba(255, 255, 255, 0.486);
+}
+
+#relative-div{
+    position: relative; 
+    width: 0; 
+    height: 0;
+}
+
+@media (max-width:600px){
+
+    #title-text{
+        height:40vh;
+    }
+
+    #title-background img{
+    height:45vh;
+    }
+
+    h1{
+    font-size :15vw;
+    }
+    h2{
+    font-size : 7vw;
+    }
+
+    .info-card{
+       min-width: 70vw;
+    }
+
+    .button{
+        top: -70px;
+    }
+
+    .info-card-image{
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        max-width: 50vw;
+    }
+}
