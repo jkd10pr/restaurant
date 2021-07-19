@@ -1,10 +1,12 @@
+import Background from './assets/background.jpeg'
+
 const loadHeader = () => {
     let header = document.createElement('div');
     let titleText = document.createElement('div');
     let mainTitle = document.createElement('h1');
     let subTitle = document.createElement('h2');
     let titleBackground = document.createElement('div');
-    let backgroundImage = document.createElement('img');
+    const backgroundImage = new Image();
     let divToPositionButtons = document.createElement('div');
     let buttonsArea = document.createElement('div');
     let buttonHome = document.createElement('button');
@@ -20,7 +22,7 @@ const loadHeader = () => {
     buttonMenu.classList.add('button');
     buttonContact.classList.add('button');
 
-    backgroundImage.src='background.jpeg';
+    backgroundImage.src=Background;
     backgroundImage.alt='A background image showing a bunch of pizzas.';
     
     mainTitle.innerText = 'Buongiorno Restaurante';
