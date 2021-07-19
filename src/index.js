@@ -1,1 +1,3 @@
-console.log('I am running!');
+import loadPage from './loadpage'
+
+loadPage();
