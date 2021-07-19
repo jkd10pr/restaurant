@@ -1,3 +1,9 @@
+import NeapImage from './assets/neapolitana.jpeg'
+import NYImage from './assets/newyork.jpeg'
+import LasagneImage from './assets/lasagne.jpeg'
+import CarbonImage from './assets/carbonara.jpeg'
+import TiraImage from './assets/tiramisu.jpeg'
+
 const loadMenu = () =>{
     let menuHeader = document.createElement('div');
     let mainWrapper = document.createElement('div');
@@ -8,19 +14,20 @@ const loadMenu = () =>{
     menuHeader.style.display = 'block';
 
     mainWrapper.appendChild(menuHeader);
-    mainWrapper.appendChild(createMenuPosition('neapolitana.jpeg','Pizza Neapolitana','Classic neapolitan style pizza with tomato sauce, bazil and mozarella','30 $'));
-    mainWrapper.appendChild(createMenuPosition('newyork.jpeg','Pizza New York Style','New York Style pizza with peperoni, mozarella and thin, crunchy crust.','20 $'));
-    mainWrapper.appendChild(createMenuPosition('lasagne.jpeg','Lasagne Bolognese','Classic italian lasagne made with ground beef and red wine','25 $'));
-    mainWrapper.appendChild(createMenuPosition('carbonara.jpeg','Spaghetti alla carbonara','Our own homemade pasta with eggs, guanciale and sour cream','10 $'));
-    mainWrapper.appendChild(createMenuPosition('tiramisu.jpeg','Ricetta Tiramisù','Classic Italian no-bake dessert made with layers of coffee-soaked ladyfingers and incredible mascarpone cream','10 $'));
+    mainWrapper.appendChild(createMenuPosition(NeapImage,'Pizza Neapolitana','Classic neapolitan style pizza with tomato sauce, bazil and mozarella','30 $'));
+    mainWrapper.appendChild(createMenuPosition(NYImage,'Pizza New York Style','New York Style pizza with peperoni, mozarella and thin, crunchy crust.','20 $'));
+    mainWrapper.appendChild(createMenuPosition(LasagneImage,'Lasagne Bolognese','Classic italian lasagne made with ground beef and red wine','25 $'));
+    mainWrapper.appendChild(createMenuPosition(CarbonImage,'Spaghetti alla carbonara','Our own homemade pasta with eggs, guanciale and sour cream','10 $'));
+    mainWrapper.appendChild(createMenuPosition(TiraImage,'Ricetta Tiramisù','Classic Italian no-bake dessert made with layers of coffee-soaked ladyfingers and incredible mascarpone cream','10 $'));
 
 
     return mainWrapper;
 }
 
-const createMenuPosition = (imgUrl,dishName,description,cost) => {
+const createMenuPosition = (importedImg,dishName,description,cost) => {
     let menuPosition = document.createElement('div');
-    let image = document.createElement('img');
+    // let image = document.createElement('img');
+    let image = new Image();
     let textWrapper = document.createElement('div');
     let title = document.createElement('div');
     let details = document.createElement('p');
@@ -33,7 +40,7 @@ const createMenuPosition = (imgUrl,dishName,description,cost) => {
     details.classList.add('menu-details');
     price.classList.add('menu-price');
 
-    image.src=imgUrl;
+    image.src=importedImg;
     title.innerText = dishName;
     details.innerText = description;
     price.innerText = cost;
