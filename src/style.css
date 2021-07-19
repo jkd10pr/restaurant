@@ -39,7 +39,7 @@ h2{
     color:white;
     text-shadow: 0px 0px 5px black;
     font-size : 4vh;
-    font-family: 'MainFont', cursive;
+    font-family: 'DecorativeFont', cursive;
     z-index: 100;
     margin-top: 10px
 }
@@ -185,6 +185,8 @@ h2{
 .menu-details{
     margin: 0px;
     font-size: 1.1rem;
+    font-family: 'SecondaryFont', sans-serif;
+    font-weight: 600;
     font-style: italic;
 }
 
@@ -271,7 +273,7 @@ h3{
 }
 
 @font-face {
-    font-family: 'DecorativeFont', sans-serif;
+    font-family: 'MainFont', sans-serif;
     src: url('./assets/Roboto-Light.ttf') format('truetype');
     font-style: normal;
 }
